@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background-color: #c8c2aa;
+    color: #4d493e;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+
+    background-color: #4d493e;
+    color: #ded8c1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+
+.navbar h1 {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+
+.hamburguesa {
+    background-color: transparent;
+    color: #ded8c1;
+
+    border: 1px solid #ded8c1;
+
+    padding: 8px 12px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.usuario-navbar {
+    margin-left: auto;
+
+    padding: 10px 15px;
+
+    border: 1px solid #ded8c1;
+}
+
+
+/* CONTENEDOR */
+
+.contenedor {
+    display: flex;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 230px;
+
+    min-height: calc(100vh - 70px);
+
+    background-color: #595548;
+    color: #ded8c1;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+.sidebar h2 {
+    font-size: 18px;
+
+    border-bottom: 1px solid #ded8c1;
+
+    padding-bottom: 10px;
+}
+
+
+.opcion-menu,
+.submenu button {
+    width: 100%;
+
+    background-color: transparent;
+    color: #ded8c1;
+
+    border: none;
+
+    padding: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.opcion-menu:hover,
+.submenu button:hover {
+    background-color: #ded8c1;
+    color: #4d493e;
+}
+
+
+.submenu {
+    display: none;
+
+    margin-left: 15px;
+}
+
+
+/* CONTENIDO */
+
+.contenido {
+    flex: 1;
+
+    padding: 40px;
+}
+
+
+.contenido h2 {
+    border-bottom: 2px solid #4d493e;
+
+    padding-bottom: 10px;
+}
+
+
+/* CAPTURA */
+
+.seccion-captura {
+    display: none;
+}
+
+
+.panel {
+    max-width: 650px;
+
+    background-color: #ded8c1;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    border-left: 6px solid #4d493e;
+}
+
+
+.panel h3 {
+    margin-top: 0;
+
+    border-bottom: 1px solid #4d493e;
+
+    padding-bottom: 10px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 18px;
+}
+
+
+.campo label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+
+.campo input {
+    width: 100%;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    background-color: #eeeadd;
+
+    border: 1px solid #4d493e;
+}
+
+
+/* BOTONES */
+
+.panel button {
+    padding: 10px 20px;
+
+    background-color: #4d493e;
+    color: #ded8c1;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+.panel button:hover {
+    background-color: #292720;
+}
+
+
+/* MENSAJES */
+
+.error {
+    color: #8b2f2f;
+
+    font-size: 13px;
+}
+
+
+.resultado {
+    font-weight: bold;
+}
