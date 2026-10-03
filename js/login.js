@@ -77,11 +77,9 @@ formLogin.addEventListener("submit", function(evento) {
     // Login correcto
 
     if (correcto) {
-
-        localStorage.setItem("usuarioSesion", correo);
-
-        window.location.href = "index.html";
-
-    }
+    localStorage.setItem("usuarioSesion", "admin1");
+    localStorage.setItem("correoSesion", correo);
+    window.location.href = "index.html";
+}
 
 });
