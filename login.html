@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio de sesión</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+    <main class="login-contenedor">
+
+        <div class="login-panel">
+
+            <h1>INICIO DE SESIÓN</h1>
+
+            <p class="subtitulo">
+                SYSTEM // DATA MANAGEMENT
+            </p>
+
+
+            <form id="formLogin">
+
+                <div class="campo">
+
+                    <label for="correoLogin">
+                        Correo electrónico:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="correoLogin"
+                        placeholder="usuario@gmail.com"
+                    >
+
+                    <p id="errorCorreoLogin" class="error"></p>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="passwordLogin">
+                        Contraseña:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="passwordLogin"
+                        placeholder="Contraseña"
+                    >
+
+                    <p id="errorPasswordLogin" class="error"></p>
+
+                </div>
+
+
+                <button type="submit">
+                    INICIAR SESIÓN
+                </button>
+
+            </form>
+
+
+            <p id="resultadoLogin" class="resultado"></p>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/utileria.js"></script>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

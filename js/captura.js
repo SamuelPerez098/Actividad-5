@@ -1,7 +1,6 @@
 // Captura.js
 
 let btnMenu = document.getElementById("btnMenu");
-
 let sidebar = document.getElementById("sidebar");
 
 
@@ -262,12 +261,130 @@ formAlumno.addEventListener("submit", function(evento) {
 
     if (correcto) {
 
-        resultado.textContent =
-            "Datos del alumno validados correctamente.";
+    resultado.textContent =
+        "Datos del alumno validados correctamente.";
 
-        /*
-        aqui conectas tu parte muejeje
-        */
+    let edad =
+        calcularEdad(fecha);
+
+    let modalEdad =
+        document.getElementById("modalEdad");
+
+    let resultadoEdad =
+        document.getElementById("resultadoEdad");
+
+
+    if (esMayorDeEdad(fecha)) {
+
+        resultadoEdad.textContent =
+            "El alumno tiene " +
+            edad +
+            " años y es mayor de edad.";
+
+    } else {
+
+        resultadoEdad.textContent =
+            "El alumno tiene " +
+            edad +
+            " años y es menor de edad.";
+
+    }
+
+
+    modalEdad.style.display = "flex";
+
+}
+
+// MODAL DE EDAD
+
+
+let modalEdad =
+    document.getElementById("modalEdad");
+
+let resultadoEdad =
+    document.getElementById("resultadoEdad");
+
+let btnCerrarModal =
+    document.getElementById("btnCerrarModal");
+
+let btnAceptarModal =
+    document.getElementById("btnAceptarModal");
+
+
+// Mostrar resultado de edad
+
+if (correcto) {
+
+    resultado.textContent =
+        "Datos del alumno validados correctamente.";
+
+    let edad =
+        calcularEdad(fecha);
+
+    let modalEdad =
+        document.getElementById("modalEdad");
+
+    let resultadoEdad =
+        document.getElementById("resultadoEdad");
+
+
+    if (esMayorDeEdad(fecha)) {
+
+        resultadoEdad.textContent =
+            "El alumno tiene " +
+            edad +
+            " años y es mayor de edad.";
+
+    } else {
+
+        resultadoEdad.textContent =
+            "El alumno tiene " +
+            edad +
+            " años y es menor de edad.";
+
+    }
+
+
+    modalEdad.style.display = "flex";
+
+}
+
+});
+
+
+// ==================================================
+// CERRAR MODAL DE EDAD
+// ==================================================
+
+let modalEdad =
+    document.getElementById("modalEdad");
+
+let btnCerrarModal =
+    document.getElementById("btnCerrarModal");
+
+let btnAceptarModal =
+    document.getElementById("btnAceptarModal");
+
+
+btnCerrarModal.addEventListener("click", function() {
+
+    modalEdad.style.display = "none";
+
+});
+
+
+btnAceptarModal.addEventListener("click", function() {
+
+    modalEdad.style.display = "none";
+
+});
+
+
+window.addEventListener("click", function(evento) {
+
+    if (evento.target === modalEdad) {
+
+        modalEdad.style.display = "none";
 
     }
 

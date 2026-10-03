@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,96 +8,259 @@
     <title>Sistema de Usuarios</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
+
+    <!-- Navbar -->
     <header class="navbar">
+
         <button type="button" id="btnMenu" class="hamburguesa">
             ☰
         </button>
+
         <h1>SYSTEM // DATA MANAGEMENT</h1>
+
+        <!-- Usuario -->
         <div class="usuario-navbar">
-            USUARIO
-            <!-- aqui opciones del usuario samus-->
+
+            <button type="button" id="btnUsuario" class="btn-usuario">
+                <span id="nombreUsuarioNavbar">USUARIO</span>
+                ▼
+            </button>
+
+            <div id="menuUsuario" class="menu-usuario">
+
+                <span id="correoUsuarioNavbar"></span>
+
+                <button type="button" id="btnCerrarSesion">
+                    Cerrar sesión
+                </button>
+
+            </div>
+
         </div>
+
     </header>
 
+
     <div class="contenedor">
+
         <!-- Sidebar -->
         <aside id="sidebar" class="sidebar">
+
             <h2>MENÚ</h2>
-            <button type="button" id="btnUsuarios" class="opcion-menu"> Usuarios </button>
+
+            <button type="button" id="btnUsuarios" class="opcion-menu">
+                Usuarios
+            </button>
+
             <div id="submenuUsuarios" class="submenu">
-            <button type="button" id="btnCaptura"> Captura </button>
+
+                <button type="button" id="btnCaptura">
+                    Captura
+                </button>
+
             </div>
+
         </aside>
+
 
         <!-- Contenido principal -->
         <main class="contenido">
 
             <!-- Pantalla inicial -->
             <section id="inicio">
+
                 <h2>Panel del sistema</h2>
-                <p> Selecciona una opción del menú lateral. </p>
+
+                <p>
+                    Selecciona una opción del menú lateral.
+                </p>
+
             </section>
+
 
             <!-- Sección de captura -->
             <section id="seccionCaptura" class="seccion-captura">
+
                 <h2>Captura de datos</h2>
-                <p> Ingresa los datos solicitados. </p>
+
+                <p>
+                    Ingresa los datos solicitados.
+                </p>
+
 
                 <!-- Formulario Usuario -->
                 <div class="panel">
+
                     <h3>Usuario</h3>
+
                     <form id="formUsuario">
+
                         <div class="campo">
-                            <label for="nombreUsuario"> Nombre de usuario: </label>
-                            <input type="text" id="nombreUsuario" placeholder="Ej. Braulio">
+
+                            <label for="nombreUsuario">
+                                Nombre de usuario:
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombreUsuario"
+                                placeholder="Ej. Braulio"
+                            >
+
                             <p id="errorNombreUsuario" class="error"></p>
+
                         </div>
-                        
+
+
                         <div class="campo">
-                            <label for="correoUsuario"> Correo electrónico: </label>
-                            <input type="text" id="correoUsuario" placeholder="usuario@gmail.com">
+
+                            <label for="correoUsuario">
+                                Correo electrónico:
+                            </label>
+
+                            <input
+                                type="text"
+                                id="correoUsuario"
+                                placeholder="usuario@gmail.com"
+                            >
+
                             <p id="errorCorreoUsuario" class="error"></p>
+
                         </div>
+
 
                         <div class="campo">
-                            <label for="passwordUsuario">Contraseña:</label>
-                            <input type="password" id="passwordUsuario" placeholder="Contraseña">
+
+                            <label for="passwordUsuario">
+                                Contraseña:
+                            </label>
+
+                            <input
+                                type="password"
+                                id="passwordUsuario"
+                                placeholder="Contraseña"
+                            >
+
                             <p id="errorPasswordUsuario" class="error"></p>
+
                         </div>
 
-                        <button type="submit"> Validar usuario </button>
+
+                        <button type="submit">
+                            Validar usuario
+                        </button>
+
                     </form>
+
                     <p id="resultadoUsuario" class="resultado"></p>
+
                 </div>
+
 
                 <!-- Formulario Alumno -->
                 <div class="panel">
+
                     <h3>Alumno</h3>
+
                     <form id="formAlumno">
+
                         <div class="campo">
-                            <label for="nombreAlumno"> Nombre del alumno:</label>
-                            <input type="text" id="nombreAlumno" placeholder="Ej. Braulio Mendoza Vargas">
+
+                            <label for="nombreAlumno">
+                                Nombre del alumno:
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombreAlumno"
+                                placeholder="Ej. Braulio Mendoza Vargas"
+                            >
+
                             <p id="errorNombreAlumno" class="error"></p>
+
                         </div>
+
+
                         <div class="campo">
-                            <label for="numeroControl">Número de control:</label>
-                            <input type="text" id="numeroControl" maxlength="6" placeholder="123456" >
+
+                            <label for="numeroControl">
+                                Número de control:
+                            </label>
+
+                            <input
+                                type="text"
+                                id="numeroControl"
+                                maxlength="6"
+                                inputmode="numeric"
+                                placeholder="123456"
+                            >
+
                             <p id="errorNumeroControl" class="error"></p>
+
                         </div>
+
+
                         <div class="campo">
-                            <label for="fechaNacimiento"> Fecha de nacimiento: </label>
-                            <input type="date" id="fechaNacimiento" >
+
+                            <label for="fechaNacimiento">
+                                Fecha de nacimiento:
+                            </label>
+
+                            <input
+                                type="date"
+                                id="fechaNacimiento"
+                            >
+
                             <p id="errorFecha" class="error"></p>
+
                         </div>
-                        <button type="submit"> Validar alumno </button>
+
+
+                        <button type="submit">
+                            Validar alumno
+                        </button>
+
                     </form>
+
                     <p id="resultadoAlumno" class="resultado"></p>
+
                 </div>
+
             </section>
+
         </main>
+
     </div>
+
+
+    <!-- Modal de edad -->
+    <div id="modalEdad" class="modal">
+
+        <div class="modal-contenido">
+
+            <button type="button" id="btnCerrarModal" class="cerrar-modal">
+                ×
+            </button>
+
+            <h2>Resultado de edad</h2>
+
+            <p id="resultadoEdad"></p>
+
+            <button type="button" id="btnAceptarModal">
+                Aceptar
+            </button>
+
+        </div>
+
+    </div>
+
+
     <script src="js/utileria.js"></script>
     <script src="js/captura.js"></script>
+
 </body>
+
 </html>
+
