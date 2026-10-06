@@ -547,11 +547,6 @@ login.html
 Esto evita que el sistema conserve la sesión simulada después de cerrar sesión.
 
 ---
-
-# 15. Capturas de pantalla
-
-A continuación se muestran las capturas principales del proyecto funcionando en el navegador.
-
 ## Inicio de sesión
 
 ![Inicio de sesión](img/Captura4.jpeg)
@@ -567,8 +562,6 @@ A continuación se muestran las capturas principales del proyecto funcionando en
 ## Captura de datos
 
 ![Captura de datos](img/Captura2.jpeg)
-
-
 ---
 
 # 16. Resultado final
