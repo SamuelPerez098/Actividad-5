@@ -333,9 +333,9 @@ El diseño visual se agregó posteriormente mediante `login.css`.
 
 ### Captura del login
 
-![Pantalla de inicio de sesión](assets/login.png)
+![Pantalla de inicio de sesión](img/Captura4.jpeg)
 
-> **Nota:** colocar aquí una captura de pantalla del login y guardar la imagen como `assets/login.png`.
+> **Nota:** colocar aquí una captura de pantalla del login y guardar la imagen como `img/Captura4.jpeg`.
 
 ---
 
@@ -393,7 +393,7 @@ El nombre del usuario se coloca dinámicamente mediante JavaScript.
 
 ### Captura del Navbar
 
-![Navbar del sistema](assets/navbar.png)
+![Navbar del sistema](img/Captura3.jpeg)
 
 > **Nota:** colocar aquí una captura donde se vea el navbar con el nombre del usuario.
 
@@ -417,7 +417,7 @@ Dentro del submenu se encuentra la opción **Captura**.
 
 ### Captura del Sidebar
 
-![Sidebar del sistema](assets/sidebar.png)
+![Sidebar del sistema](img/Captura1.jpeg)
 
 > **Nota:** colocar aquí una captura donde se observe el sidebar abierto y la opción Captura.
 
@@ -449,7 +449,7 @@ Permite ingresar:
 
 ### Captura del formulario
 
-![Captura de datos](assets/captura.png)
+![Captura de datos](img/Captura2.jpeg)
 
 > **Nota:** colocar aquí una captura del apartado de captura funcionando.
 
@@ -483,7 +483,7 @@ ABC123
 
 ### Captura del número de control
 
-![Número de control](assets/numero-control.png)
+![Número de control](img/Captura3.jpeg)
 
 > **Nota:** colocar una captura mostrando el formulario de alumno y el número de control.
 
@@ -522,7 +522,7 @@ El modal contiene:
 
 ### Captura del modal
 
-![Modal de edad](assets/modal.png)
+![Modal de edad](img/Captura2.jpeg)
 
 > **Nota:** colocar una captura del modal mostrando el resultado de la edad.
 
