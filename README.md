@@ -96,6 +96,7 @@ La estructura utilizada para organizar el proyecto es:
 ```text
 Proyecto/
 │
+├── README.md
 ├── login.html
 ├── index.html
 │
@@ -330,49 +331,11 @@ El diseño visual se agregó posteriormente mediante `login.css`.
 
 ![Pantalla de inicio de sesión](img/Captura4.jpeg)
 
-> **Nota:** colocar aquí una captura de pantalla del login y guardar la imagen como `img/Captura4.jpeg`.
-
 ---
 
-# 8. Validación del login
-
-Después de crear la estructura HTML se implementó JavaScript.
-
-El formulario obtiene los valores introducidos por el usuario y los valida utilizando las funciones de `utileria.js`.
-
-El proceso consiste en:
-
-```text
-Usuario escribe datos
-        │
-        ▼
-Se presiona "INICIAR SESIÓN"
-        │
-        ▼
-Se valida el correo
-        │
-        ▼
-Se valida la contraseña
-        │
-        ▼
-¿Los datos son correctos?
-      /       \
-    NO         SÍ
-    │           │
-    ▼           ▼
-Mostrar      Guardar usuario
-error        en localStorage
-                │
-                ▼
-           index.html
-```
-
----
-
-# 9. Creación del Navbar
+# 8. Creación del Navbar
 
 Una vez creado el login se desarrolló la pantalla principal.
-
 En la parte superior se agregó el navbar.
 
 El navbar contiene:
@@ -390,11 +353,9 @@ El nombre del usuario se coloca dinámicamente mediante JavaScript.
 
 ![Navbar del sistema](img/Captura3.jpeg)
 
-> **Nota:** colocar aquí una captura donde se vea el navbar con el nombre del usuario.
-
 ---
 
-# 10. Creación del Sidebar
+# 9. Creación del Sidebar
 
 Después se agregó el menú lateral o sidebar.
 
@@ -414,11 +375,9 @@ Dentro del submenu se encuentra la opción **Captura**.
 
 ![Sidebar del sistema](img/Captura1.jpeg)
 
-> **Nota:** colocar aquí una captura donde se observe el sidebar abierto y la opción Captura.
-
 ---
 
-# 11. Creación del apartado de captura
+# 10. Creación del apartado de captura
 
 Al seleccionar **Captura**, se oculta la pantalla inicial y se muestra la sección correspondiente a la captura de información.
 
@@ -446,11 +405,9 @@ Permite ingresar:
 
 ![Captura de datos](img/Captura2.jpeg)
 
-> **Nota:** colocar aquí una captura del apartado de captura funcionando.
-
 ---
 
-# 12. Validación del número de control
+# 11. Validación del número de control
 
 El número de control debe contener exactamente **6 dígitos**.
 
@@ -480,11 +437,9 @@ ABC123
 
 ![Número de control](img/Captura3.jpeg)
 
-> **Nota:** colocar una captura mostrando el formulario de alumno y el número de control.
-
 ---
 
-# 13. Creación del modal de edad
+# 12. Creación del modal de edad
 
 Finalmente se creó un modal para mostrar el resultado de la edad del alumno.
 
@@ -519,11 +474,10 @@ El modal contiene:
 
 ![Modal de edad](img/Captura2.jpeg)
 
-> **Nota:** colocar una captura del modal mostrando el resultado de la edad.
 
 ---
 
-# 14. Cerrar sesión
+# 13. Cerrar sesión
 
 El sistema también cuenta con una opción para cerrar sesión.
 
@@ -531,6 +485,7 @@ Cuando el usuario selecciona **Cerrar sesión**, se elimina el dato almacenado e
 
 ```javascript
 localStorage.removeItem("usuarioSesion");
+localStorage.removeItem("correoSesion");
 ```
 
 Después el usuario es enviado nuevamente a:
@@ -559,10 +514,3 @@ Esto evita que el sistema conserve la sesión simulada después de cerrar sesió
 ![Captura de datos](img/Captura2.jpeg)
 ---
 
-# 16. Resultado final
-
-El proyecto integra una pantalla de inicio de sesión con validaciones, almacenamiento temporal del usuario mediante `localStorage` y una pantalla principal de administración.
-
-El sistema permite navegar mediante un sidebar, consultar la información del usuario desde el navbar, capturar información de usuarios y alumnos, validar un número de control de seis dígitos y determinar la mayoría de edad mediante un modal.
-
-Todo el funcionamiento fue desarrollado utilizando **HTML5, CSS3 y JavaScript**, sin utilizar un framework CSS.
