@@ -41,6 +41,13 @@ El sistema también permite validar:
 - Edad del alumno.
 - Mayoría o minoría de edad.
 
+Usuario y contraseña para ingresar inicialmente.
+
+```text
+admin@gmail.com
+Admin123!
+```
+
 ---
 
 # 2. Tecnologías utilizadas
