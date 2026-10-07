@@ -144,7 +144,15 @@ formUsuario.addEventListener("submit", function(evento) {
 
 
     if (correcto) {
-
+        let usuario = {
+        nombre: nombre.trim(),
+        correo: correo.trim().toLowerCase(),
+        password: password
+    };
+    localStorage.setItem(
+        "usuarioRegistrado",
+        JSON.stringify(usuario)
+    );
         resultado.textContent =
             "Usuario validado correctamente.";
     }
@@ -264,7 +272,9 @@ let btnCerrarModal = document.getElementById("btnCerrarModal");
 let btnAceptarModal = document.getElementById("btnAceptarModal");
 // Mostrar resultado de edad
 if (correcto) {
-    resultado.textContent =  "Datos del alumno validados correctamente.";
+    
+    resultado.textContent =
+        "Usuario registrado correctamente.";
     let edad =  calcularEdad(fecha);
     let modalEdad =  document.getElementById("modalEdad");
     let resultadoEdad =  document.getElementById("resultadoEdad");

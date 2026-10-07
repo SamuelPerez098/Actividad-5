@@ -77,9 +77,48 @@ formLogin.addEventListener("submit", function(evento) {
     // Login correcto
 
     if (correcto) {
-    localStorage.setItem("usuarioSesion", "admin1");
-    localStorage.setItem("correoSesion", correo);
-    window.location.href = "index.html";
-}
+        // Cuenta inicial para entrar al sistema
+        let correoAdmin = "admin@gmail.com";
+        let passwordAdmin = "Admin123!";
+        if (
+            correo === correoAdmin &&
+            password === passwordAdmin
+        ) {
+            localStorage.setItem(
+                "usuarioSesion",
+                "admin1"
+            );
+            localStorage.setItem(
+                "correoSesion",
+                correoAdmin
+            );
+            window.location.href = "index.html";
+            return;
+        }
+
+        let datosGuardados =
+        localStorage.getItem("usuarioRegistrado");
+        if (datosGuardados === null) {
+
+            resultado.textContent =
+                "El usuario no está registrado.";
+
+            return;
+        }
+        let usuario =
+        JSON.parse(datosGuardados);
+        /// coparacion
+         if (
+            correo.toLowerCase() === usuario.correo &&
+            password === usuario.password
+        ) {
+            localStorage.setItem( "usuarioSesion", usuario.nombre );
+            localStorage.setItem( "correoSesion", usuario.correo );
+            window.location.href = "index.html";
+        } else {
+            resultado.textContent = "Correo o contraseña incorrectos.";
+        }
+
+    }
 
 });
