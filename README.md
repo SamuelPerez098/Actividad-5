@@ -26,7 +26,7 @@
 
 El proyecto consiste en un sistema web de usuarios compuesto por dos pantallas principales: una pantalla de inicio de sesión y una pantalla principal de administración.
 
-La primera pantalla permite ingresar un correo electrónico y una contraseña. Los datos son validados mediante JavaScript utilizando las funciones de la biblioteca `utileria.js`. Si la información es correcta, se guarda el usuario en `localStorage` y se permite el acceso al sistema.
+En login.html, el usuario ingresa su correo electrónico y contraseña. Primero se verifica que ambos datos tengan un formato válido mediante las funciones de utileria.js. Después, login.js compara las credenciales con las de un usuario registrado previamente en localStorage. También se cuenta con una cuenta administrativa inicial que permite acceder al sistema y registrar nuevos usuarios.
 
 La segunda pantalla corresponde al sistema principal. Cuenta con un **navbar**, un **sidebar**, un menú de usuarios, un apartado de captura de información y un modal que muestra el resultado de la validación de edad de un alumno.
 
@@ -83,6 +83,7 @@ Los archivos principales de JavaScript son:
 js/
 ├── utileria.js
 ├── login.js
+├── navbar.js
 └── captura.js
 ```
 
@@ -107,7 +108,7 @@ Proyecto/
 │   ├── login.js
 │   └── captura.js
 │
-└── assets/
+└── img/
     └── Captura1.jpeg
 ```
 
@@ -115,51 +116,45 @@ Proyecto/
 
 # 4. Flujo del login hacia el sistema
 
-El funcionamiento del sistema comienza en `login.html`.
+El funcionamiento del sistema comienza en login.html, donde el usuario ingresa su correo electrónico y contraseña, el formulario utiliza las funciones validarCorreo() y validarPassword() de la librería utileria.js para comprobar que los datos tengan un formato válido.
 
-El usuario encuentra dos campos:
-
-1. Correo electrónico.
-2. Contraseña.
-
-Además, existe un botón denominado **INICIAR SESIÓN**.
-
-El formulario se conecta con `login.js` para realizar las validaciones.
+Después de validar el formato, `login.js` compara las credenciales ingresadas con las almacenadas previamente en localStorage. También existe una cuenta administrativa inicial que permite ingresar al sistema y registrar nuevos usuarios.
 
 ### Flujo general
 
 ```text
-             INICIO
-                │
-                ▼
-         ┌──────────────┐
-         │  login.html  │
-         └──────┬───────┘
-                │
-                ▼
-       Ingresa correo y contraseña
-                │
-                ▼
-          Validación JS
-                │
-        ┌───────┴────────┐
-        │                │
-      Error            Correcto
-        │                │
-        ▼                ▼
-   Mostrar error    Guardar usuario
-                         │
-                         ▼
-                  localStorage
-                         │
-                         ▼
-                    index.html
-                         │
-                         ▼
-                 Sistema principal
+          login.html
+              │
+              ▼
+    Correo y contraseña
+              │
+              ▼
+ validarCorreo() y validarPassword()
+              │
+       ┌──────┴──────┐
+       │             │
+   Inválidos      Válidos
+       │             │
+       ▼             ▼
+ Mostrar error   Comparar credenciales
+                     │
+             ┌───────┴───────┐
+             │               │
+       No coinciden       Coinciden
+             │               │
+             ▼               ▼
+      Mostrar error     Guardar sesión
+                             │
+                             ▼
+                         index.html
 ```
 
-El archivo `login.html` carga `utileria.js` y `login.js`, permitiendo utilizar las funciones de validación desde el código del login.
+Cuando las credenciales son correctas, se guardan temporalmente el nombre y el correo del usuario que inició sesión:
+
+localStorage.setItem("usuarioSesion", usuario.nombre);
+localStorage.setItem("correoSesion", usuario.correo);
+
+Después, el sistema redirige a index.html, donde estos datos se utilizan para mostrar el nombre y correo del usuario en el navbar.
 
 ---
 
